@@ -28,8 +28,7 @@ const Todos = () => {
       setLoading(false);
     } catch (error) {
       if (error.response.data.error) {
-        navigate("/login");
-        console.log(error);
+        navigate("/login"); 
       } 
       toast.error(error.response.data.message);
       setLoading(false);
