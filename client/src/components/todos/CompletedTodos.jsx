@@ -25,7 +25,7 @@ const CompletedTodos = () => {
       setCompletedTodos(response.data.completedTodos);
       setLoading(false);
     } catch (error) {
-      if (error.response.data.message) {
+      if (error.response.data.error) {
         navigate("/login");
       }
       setLoading(false);

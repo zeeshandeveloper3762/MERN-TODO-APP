@@ -16,7 +16,7 @@ const Login = () => {
     try {
       // Sending form data to the server
       const response = await axios.post(
-        "https://mern-todo-app-api-l8vj.onrender.com/login",
+        "https://mern-todo-app-api.onrender.com/login",
         {
           email,
           password,
@@ -25,16 +25,14 @@ const Login = () => {
           withCredentials: true,
           headers: { "Content-Type": "application/json" },
         }
-      );
-        console.log(response);
+      ); 
       // Show success message using Toastify
       toast.success(response.data.message, {
         position: toast.POSITION.TOP_CENTER,
       });
       // Navigate to home page
       navigate("/");
-    } catch (error) {
-      console.log(error);
+    } catch (error) { 
       // Show error message using Toastify
       toast.error(error.response.data.message, {
         position: toast.POSITION.TOP_CENTER,
