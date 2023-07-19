@@ -17,7 +17,7 @@ const PendingTodos = () => {
 
   const fetchPendingTodos = async () => {
     try {
-      const response = await axios.get("http://localhost:500/pendingTodos", {
+      const response = await axios.get("https://mern-todo-app-api-l8vj.onrender.com/pendingTodos", {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       });
@@ -39,7 +39,7 @@ const PendingTodos = () => {
   const handleUpdateTodoStatus = async (todoId, completed) => {
     try {
       const response = await axios.put(
-        "http://localhost:500/todo/updateStatus",
+        "https://mern-todo-app-api-l8vj.onrender.com/todo/updateStatus",
         { todoId, completed },
         {
           withCredentials: true,

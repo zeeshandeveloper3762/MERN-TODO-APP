@@ -18,7 +18,7 @@ const CompletedTodos = () => {
 
   const fetchCompletedTodos = async () => {
     try {
-      const response = await axios.get("http://localhost:500/completedTodos", {
+      const response = await axios.get("https://mern-todo-app-api-l8vj.onrender.com/completedTodos", {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       });
@@ -34,7 +34,7 @@ const CompletedTodos = () => {
 
   const handleDeleteTodo = async (todoId) => {
     try {
-      const response = await axios.delete("http://localhost:500/todo/delete", {
+      const response = await axios.delete("https://mern-todo-app-api-l8vj.onrender.com/todo/delete", {
         data: { todoId },
         withCredentials: true,
         headers: { "Content-Type": "application/json" },

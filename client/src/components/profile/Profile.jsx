@@ -21,7 +21,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get("http://localhost:500/user", {
+        const response = await axios.get("https://mern-todo-app-api-l8vj.onrender.com/user", {
           withCredentials: true,
           headers: { "Content-Type": "application/json" },
         });
@@ -46,7 +46,7 @@ const Profile = () => {
 
   const confirmLogout = async () => {
     try {
-      const response = await axios.get("http://localhost:500/logout", {
+      const response = await axios.get("https://mern-todo-app-api-l8vj.onrender.com/logout", {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       });
@@ -69,7 +69,7 @@ const Profile = () => {
 
   const handleDeleteProfile = async () => {
     try {
-      const response = await axios.delete("http://localhost:500/user/delete", {
+      const response = await axios.delete("https://mern-todo-app-api-l8vj.onrender.com/user/delete", {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       });
@@ -93,7 +93,7 @@ const Profile = () => {
 
     try {
       const response = await axios.put(
-        "http://localhost:500/user/update",
+        "https://mern-todo-app-api-l8vj.onrender.com/user/update",
         { name, email },
         {
           withCredentials: true,

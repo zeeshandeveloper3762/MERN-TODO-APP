@@ -17,7 +17,7 @@ const Signup = () => {
     try {
       // Sending form data to the server
       const response = await axios.post(
-        "http://localhost:500/signup",
+        "https://mern-todo-app-api-l8vj.onrender.com/signup",
         { name, email, password },
         {
           withCredentials: true,

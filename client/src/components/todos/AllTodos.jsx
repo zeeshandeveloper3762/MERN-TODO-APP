@@ -20,7 +20,7 @@ const Todos = () => {
 
   const fetchTodos = async () => {
     try {
-      const response = await axios.get("http://localhost:500/todos", {
+      const response = await axios.get("https://mern-todo-app-api-l8vj.onrender.com/todos", {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       });
@@ -28,7 +28,8 @@ const Todos = () => {
       setLoading(false);
     } catch (error) {
       if (error.response.data.error) {
-        navigate("/login");
+        // navigate("/login");
+        console.log(error);
       }
       console.log(error);
       toast.error(error.response.data.message);
@@ -41,7 +42,7 @@ const Todos = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:500/addtodo",
+        "https://mern-todo-app-api-l8vj.onrender.com/addtodo",
         { todo: newTodo },
         {
           withCredentials: true,
@@ -60,7 +61,7 @@ const Todos = () => {
   const handleUpdateTodo = async (todoId, completed) => {
     try {
       const response = await axios.put(
-        "http://localhost:500/todo/updateStatus",
+        "https://mern-todo-app-api-l8vj.onrender.com/todo/updateStatus",
         { todoId, completed },
         {
           withCredentials: true,
@@ -79,7 +80,7 @@ const Todos = () => {
 
   const handleDeleteTodo = async (todoId) => {
     try {
-      const response = await axios.delete("http://localhost:500/todo/delete", {
+      const response = await axios.delete("https://mern-todo-app-api-l8vj.onrender.com/todo/delete", {
         data: { todoId },
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
@@ -95,7 +96,7 @@ const Todos = () => {
   const handleUpdateTodoText = async (todoId) => {
     try {
       const response = await axios.put(
-        "http://localhost:500/todo/update",
+        "https://mern-todo-app-api-l8vj.onrender.com/todo/update",
         { todoId, todo: editingTodo },
         {
           withCredentials: true,
