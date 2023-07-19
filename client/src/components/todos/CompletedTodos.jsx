@@ -64,7 +64,7 @@ const CompletedTodos = () => {
   };
 
   if (loading) {
-    return <p>Loading completed todos...</p>;
+    return <div className="loading"><p>Loading completed todos...</p></div>;
   }
 
   return (

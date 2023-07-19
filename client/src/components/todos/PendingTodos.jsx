@@ -72,7 +72,7 @@ const PendingTodos = () => {
   };
 
   if (loading) {
-    return <p>Loading pending todos...</p>;
+    return <div className="loading"><p>Loading pending todos...</p></div>;
   }
 
   return (

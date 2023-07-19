@@ -134,7 +134,7 @@ const Todos = () => {
   };
 
   if (loading) {
-    return <p>Loading todos...</p>;
+    return <div className="loading"><p>todos loading...</p></div>;
   }
 
   return (
