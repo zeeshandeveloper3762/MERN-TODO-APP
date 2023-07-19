@@ -113,7 +113,7 @@ const Profile = () => {
   };
 
   if (loading) {
-    return <p>Loading profile...</p>;
+    return <div className="loading"><p>Loading profile...</p></div>;
   }
 
   if (!user) {
