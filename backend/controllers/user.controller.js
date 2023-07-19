@@ -53,7 +53,7 @@ exports.login = async (req, res) => {
         });
 
         // Set the JWT token as a cookie
-        res.cookie('token', token, { httpOnly: true });
+        res.cookie('token', token, { httpOnly: true, secure: true, sameSite: 'none' });
 
         // Send the status and success message
         return res.status(200).json({

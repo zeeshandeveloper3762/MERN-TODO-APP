@@ -7,8 +7,7 @@ const { signupDataValidate } = require('../middleware/signupDataValidate.js');
 const { loginDataValidate } = require('../middleware/loginDataValidate.js');
 const { addtodo, updateTodoStatus, gettodos,getCompletedTodos, getPendingTodos ,updateTodo, deleteTodo } = require('../controllers/todo-list.controller.js');
 
-// ......auth.......
-router.get('/check-auth', jwtAuth);
+// ......auth....... 
 router.post('/signup', signupDataValidate, signup);
 router.post('/login', loginDataValidate, login);
 router.get('/logout', jwtAuth, logout);
