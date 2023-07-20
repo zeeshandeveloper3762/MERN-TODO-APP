@@ -21,7 +21,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get("https://mern-todo-app-api-l8vj.onrender.com/user", {
+        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API_KEY}/user`, {
           withCredentials: true,
           headers: { "Content-Type": "application/json" },
         });
@@ -46,7 +46,7 @@ const Profile = () => {
 
   const confirmLogout = async () => {
     try {
-      const response = await axios.get("https://mern-todo-app-api-l8vj.onrender.com/logout", {
+      const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API_KEY}/logout`, {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       });
@@ -69,7 +69,7 @@ const Profile = () => {
 
   const handleDeleteProfile = async () => {
     try {
-      const response = await axios.delete("https://mern-todo-app-api-l8vj.onrender.com/user/delete", {
+      const response = await axios.delete(`${import.meta.env.VITE_REACT_APP_API_KEY}/user/delete`, {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       });
@@ -93,7 +93,7 @@ const Profile = () => {
 
     try {
       const response = await axios.put(
-        "https://mern-todo-app-api-l8vj.onrender.com/user/update",
+        `${import.meta.env.VITE_REACT_APP_API_KEY}/user/update`,
         { name, email },
         {
           withCredentials: true,

@@ -2,7 +2,7 @@
 
 The MERN Todo App is a full-stack web application that allows users to efficiently manage their todos. It provides various features such as user authentication, signup, login, logout, profile management, password change, password reset, and CRUD operations for todos. The app consists of three sections: All Todos, Completed Todos, and Pending Todos, enabling users to organize their tasks effectively.
 
- 
+![Demo](https://www.youtube.com/embed/1bP_kCLpsB4)
 
 ## Features
 
@@ -49,11 +49,16 @@ The app exposes the following API endpoints:
 
 Follow these steps to run the MERN Todo App on your local machine:
 
+
 1. Start the backend server:
 
    ```bash
    cd backend
    npm install
+   # Add .env file (PORT=500
+   MONGO_URI=mongodb://localhost:27017/todo-app
+   CLIENT_URL=http://localhost:5173
+   SECRET=SECRET)
    npm start
    ```
 
@@ -62,13 +67,14 @@ Follow these steps to run the MERN Todo App on your local machine:
    ```bash
    cd client
    npm install
-   npm start
+   # Add .env file (VITE_REACT_APP_API_KEY=server_api)
+   npm run dev start
    ```
 
 3. Access the app in your web browser:
 
    ```bash
-   http://localhost:3000
+   http://localhost:5173
    ```
 
 **Note:** Make sure to update the port number (`3000`) according to your client server configuration.

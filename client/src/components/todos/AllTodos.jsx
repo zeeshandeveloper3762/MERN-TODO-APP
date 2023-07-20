@@ -20,7 +20,7 @@ const Todos = () => {
 
   const fetchTodos = async () => {
     try {
-      const response = await axios.get("https://mern-todo-app-api-l8vj.onrender.com/todos", {
+      const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API_KEY}/todos`, {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       });
@@ -40,7 +40,7 @@ const Todos = () => {
 
     try {
       const response = await axios.post(
-        "https://mern-todo-app-api-l8vj.onrender.com/addtodo",
+        `${import.meta.env.VITE_REACT_APP_API_KEY}/addtodo`,
         { todo: newTodo },
         {
           withCredentials: true,
@@ -59,7 +59,7 @@ const Todos = () => {
   const handleUpdateTodo = async (todoId, completed) => {
     try {
       const response = await axios.put(
-        "https://mern-todo-app-api-l8vj.onrender.com/todo/updateStatus",
+        `${import.meta.env.VITE_REACT_APP_API_KEY}/todo/updateStatus`,
         { todoId, completed },
         {
           withCredentials: true,
@@ -78,7 +78,7 @@ const Todos = () => {
 
   const handleDeleteTodo = async (todoId) => {
     try {
-      const response = await axios.delete("https://mern-todo-app-api-l8vj.onrender.com/todo/delete", {
+      const response = await axios.delete(`${import.meta.env.VITE_REACT_APP_API_KEY}/todo/delete`, {
         data: { todoId },
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
@@ -94,7 +94,7 @@ const Todos = () => {
   const handleUpdateTodoText = async (todoId) => {
     try {
       const response = await axios.put(
-        "https://mern-todo-app-api-l8vj.onrender.com/todo/update",
+        `${import.meta.env.VITE_REACT_APP_API_KEY}/todo/update`,
         { todoId, todo: editingTodo },
         {
           withCredentials: true,
